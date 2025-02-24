@@ -1,0 +1,37 @@
+body {
+    background-color: #111;
+}
+
+.bg-dark {
+    background-color: #222 !important;
+}
+
+.btn-warning {
+    background-color: #f7a81b !important;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #e69b17 !important;
+}
+
+.btn-secondary {
+    background-color: #444 !important;
+    border: none;
+}
+
+.bg-image {
+    background: url('image/signup.png') no-repeat center center/cover;
+    height: 100%;
+}
+body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+    

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+        .container {
+            display: flex;
+            width: 800px;
+            height: 500px;
+            background: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+        }
+        .form-container {
+            width: 50%;
+            padding: 40px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: orange;
+        }
+        .form-container label {
+            margin: 10px 0 5px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #444;
+            color: #fff;
+        }
+        .btn {
+            background: orange;
+            color: black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .switch-text {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .switch-text a {
+            color: orange;
+            cursor: pointer;
+        }
+        .image-container {
+            width: 50%;
+            background-size: cover;
+            background-position: center;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container" id="loginForm">
+        <h2>Sign In</h2>
+        <label>Email*</label>
+        <input type="email" id="loginEmail" placeholder="Enter email">
+        <label>Password*</label>
+        <input type="password" id="loginPassword" placeholder="Enter password">
+        <button class="btn" onclick="login()">Login</button>
+        <p id="loginError" class="error"></p>
+        <p class="switch-text">Don't have an account? <a onclick="showSignup()">Sign Up</a></p>
+    </div>
+    <div class="image-container" id="loginImage" style="background-image: url('image/login.png');"></div>
+</div>
+
+<div class="container" style="display: none;" id="signupContainer">
+    <div class="form-container">
+        <h2>Sign Up</h2>
+        <label>Name*</label>
+        <input type="text" id="signupName" placeholder="Enter your name">
+        <label>Email*</label>
+        <input type="email" id="signupEmail" placeholder="Enter email">
+        <label>Password*</label>
+        <input type="password" id="signupPassword" placeholder="Enter password">
+        <button class="btn" onclick="signup()">Sign Up</button>
+        <p class="switch-text">Already have an account? <a onclick="showLogin()">Sign In</a></p>
+    </div>
+    <div class="image-container" id="signupImage" style="background-image: url('image/signup.png');"></div>
+</div>
+
+<script>
+    function showSignup() {
+        document.getElementById('loginForm').parentElement.style.display = 'none';
+        document.getElementById('signupContainer').style.display = 'flex';
+    }
+
+    function showLogin() {
+        document.getElementById('signupContainer').style.display = 'none';
+        document.getElementById('loginForm').parentElement.style.display = 'flex';
+    }
+
+    function signup() {
+        let name = document.getElementById('signupName').value;
+        let email = document.getElementById('signupEmail').value;
+        let password = document.getElementById('signupPassword').value;
+
+        if (name === "" || email === "" || password === "") {
+            alert("Please fill all fields!");
+            return;
+        }
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        let userExists = users.find(user => user.email === email);
+
+        if (userExists) {
+            alert("User already registered! Please login.");
+            return;
+        }
+
+        users.push({ name, email, password });
+        localStorage.setItem("users", JSON.stringify(users));
+        alert("Signup successful! You can now log in.");
+        showLogin();
+    }
+
+    function login() {
+        let email = document.getElementById('loginEmail').value;
+        let password = document.getElementById('loginPassword').value;
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        let user = users.find(user => user.email === email && user.password === password);
+
+        if (!user) {
+            alert("User not registered! Please sign up first.");
+            return;
+        }
+
+        alert("Login successful! Welcome, " + user.name);
+
+        setTimeout(() => {
+            window.location.href = "Home_page.html";
+        }, 1000);
+    }
+</script>
+
+</body>
+</html>
