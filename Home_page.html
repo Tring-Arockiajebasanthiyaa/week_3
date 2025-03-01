@@ -11,15 +11,21 @@
     <link rel=”stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css” integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>
     <link rel="stylesheet" href="styles.css">
     <script>
-      function showContent(type) {
-    document.getElementById("industriesContent").style.display = type === "industries" ? "block" : "none";
-    document.getElementById("servicesContent").style.display = type === "services" ? "block" : "none";
+function showContactDetails() {
+    document.getElementById("contactDetails").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+  }
 
-    document.getElementById("industries").classList.toggle("active", type === "industries");
-    document.getElementById("services").classList.toggle("active", type === "services");
-}
-      </script>
-       
+  function closeContactDetails() {
+    document.getElementById("contactDetails").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  }
+  function toggleExtraContent() {
+        var content = document.getElementById("extraContent");
+        content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+    } 
+  </script>  
+  
 </head>
 <body>
 <div class="bg">
@@ -32,43 +38,43 @@
             <div class="collapse navbar-collapse ms-auto" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown me-5">
-                        <a class="nav-link dropdown-toggle" href="#Services" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#Services">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown me-5">
-                        <a class="nav-link dropdown-toggle" href="#Platforms" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Platforms
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-                            <li><a class="dropdown-item" href="#">Platform 1</a></li>
+                            <li><a class="dropdown-item" href="#Platforms">Platform 1</a></li>
                             <li><a class="dropdown-item" href="#">Platform 2</a></li>
                             <li><a class="dropdown-item" href="#">Platform 3</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown me-5">
-                        <a class="nav-link dropdown-toggle" href="#stories" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Industries
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
-                            <li><a class="dropdown-item" href="#">Industry 1</a></li>
+                            <li><a class="dropdown-item" href="#Stories">Industry 1</a></li>
                             <li><a class="dropdown-item" href="#">Industry 2</a></li>
                             <li><a class="dropdown-item" href="#">Industry 3</a></li>
                         </ul>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#">Insights</a>
+                        <a class="nav-link" href="#spotlight">Insights</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#foot">About</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="#oportunity">Contact Us</a>
                     </li>
                     <li class="nav-item me-5">
                         <a class="btn btn-warning" href="sign_up.html">Sign In</a>
@@ -78,14 +84,26 @@
         </div>
     </nav>
     <div class="content-nav">
-        <h1>Seamless Streaming,<br> Anywhere, Anytime</h1>
-        <p>Empowering your audience with cutting-edge <br> OTT solutions tailored for every screen.</p>
-        <div class="learn-more">
-            <button class="btn btn-warning">Learn More</button>
-        </div>
-    </div>
+      <h1>Seamless Streaming,<br> Anywhere, Anytime</h1>
+      <p>Empowering your audience with cutting-edge <br> OTT solutions tailored for every screen.</p>
+      <div class="learn-more">
+          <button class="btn btn-warning" onclick="toggleExtraContent()">Learn More</button>
+      </div>
+  </div>
+  
+  <div id="extraContent" style="display: none; padding: 15px; background: #f8f9fa; border-radius: 8px; margin-top: 10px;">
+      <h2>Why Choose Our OTT Solutions?</h2>
+      <p>We offer seamless, scalable, and feature-rich OTT solutions that ensure high-quality streaming across multiple devices. Our technology is designed to maximize viewer engagement and optimize content delivery.</p>
+      <ul>
+          <li>Adaptive Streaming for Any Network</li>
+          <li>Multi-Platform Support (Web, Mobile, TV)</li>
+          <li>AI-Powered Recommendations</li>
+          <li>Monetization & Subscription Management</li>
+      </ul>
+      <button class="btn btn-secondary" onclick="toggleExtraContent()">Close</button>
+  </div>  
 </div>
-<section id="Services" class="section2"> 
+<section id="Services" class="section2 min-vh-100 " style="padding-top: 10px;"> 
     <div class="d-flex-container">
         <div class="d-flex justify-content-start align-items-center">
           <span class="text-start">
@@ -99,7 +117,7 @@
           <p class="mb-0" style="overflow-wrap: normal; padding-right: 280px;">Explore cutting-edge AI research, trends, and expert insights for business <br>growth and innovation</p>
         </div>
       </div>
-      <div class="container" style="padding-top: 20px;">
+      <div class="container gallery min-vh-100" style="padding-top: 20px;">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
           <div class="col">
             <h2>INSIGHTS</h2>
@@ -107,7 +125,7 @@
             <p>Efficient and thorough employee off-boarding is key to minimizing your organization’s attack surface, preventing data leaks, and compliance issues.</p>
             <div class="image-container">
                 <div class="image-wrapper">
-                  <img src="image/research1.png" alt="Research" class="slanted-image">
+                  <img src="image/Insights 1.png" alt="Research" class="slanted-image">
                 </div>
               </div>
           </div>
@@ -117,7 +135,7 @@
             <p>Due to the increasing complexity and demands of developing custom document solutions, developers may take advantage of a more powerful and responsive library or framework.</p>
             <div class="image-container">
                 <div class="image-wrapper">
-                  <img src="image/research2.png" alt="Research" class="slanted-image">
+                  <img src="image/Research 1.png" alt="Research" class="slanted-image">
                 </div>
               </div>
           </div>
@@ -127,7 +145,7 @@
             <p>Discover how our innovative solutions transformed a leading OTT platform, boosting customer engagement and increasing sales by 25% through personalized predictive analytics.</p>
             <div class="image-container">
                 <div class="image-wrapper">
-                  <img src="image/research3.png" alt="Research" class="slanted-image">
+                  <img src="image/insights 2.png" alt="Research" class="slanted-image">
                 </div>
               </div>
           </div>
@@ -137,7 +155,7 @@
             <p>Staying competitive in modern sales today effectively means embracing the latest trends in tech.</p><br><br>
             <div class="image-container">
                 <div class="image-wrapper">
-                  <img src="image/research4.png" alt="Research" class="slanted-image">
+                  <img src="image/research4.png" alt="Research" class="slanted-image" style="clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);">
                 </div>
               </div>
           </div>
@@ -147,7 +165,7 @@
         <a href="#" class="btn-right btn-link toggle p-2 text-dark"><i class="fa fa-arrow-right"></i></a>
     </div>
     </section>
-    <section id="Platforms" class="section3">
+    <section id="Platforms" class="gallery min-vh-100 section3 ">
       <div class="d-flex-container">
           <div class="d-flex justify-content-start align-items-center">
               <span class="text-start">
@@ -158,67 +176,81 @@
       <div class="d-flex-container">
           <div class="d-flex justify-content-between align-items-center mt-4" style="background: #FFFFFF14;">
               <h1>Industries & Services</h1>
-              <p class="mb-0" style="overflow-wrap: normal; padding-right: 280px;">
+              <h5 class="mb-0" style="overflow-wrap: normal; padding-right: 220px;">
                   Explore our comprehensive services and tailored solutions to unlock <br> your business potential.
-              </p>
-          </div>
-      </div>
-      <div class="container1">
-          <div class="row row-cols-4">
-              <div class="col1" id="industries" onclick="showContent('industriesContent')">Industries</div>
-              <div class="col1" id="services" onclick="showContent('servicesContent')">Services</div>
+              </h5>
           </div>
       </div>
   
-      <div class="container2" style="padding-bottom: 50px;">
-          <div class="row d-flex flex-column content-section" id="industriesContent" style="display: none;">
+      <div class="container2 gallery min-vh-100" style="padding-bottom: 10%; padding-top: 30px;">
+          <div class="row d-flex flex-column" id="industriesContent">
               <div class="col2">
                   <div class="d-flex-container">
-                      <div class="d-flex justify-content-between align-items-center mt-2">
-                          <h6 class="mb-0 font-weight-bold">Streaming</h6>
-                          <p class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                          <h5 class="mb-0 font-weight-bold">Streaming Industry</h5>
+                          <h6 class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
                               Our OTT Platform offers a comprehensive solution for content creators and distributors to deliver high-quality streaming experiences.
-                          </p>
+                          </h6>
                       </div>
                   </div>
               </div>
               <div class="col2">
                   <div class="d-flex-container">
-                      <div class="d-flex justify-content-between align-items-center mt-2">
-                          <h6 class="mb-0 font-weight-bold">E-Commerce</h6>
-                          <p class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                          <h6 class="mb-0 font-weight-bold">E-Commerce Industry</h6>
+                          <h5 class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
                               Empowering online businesses with cutting-edge technologies for personalized shopping experiences.
-                          </p>
+                          </h5>
+                      </div>
+                  </div>
+              </div>
+              <div class="col2">
+                  <div class="d-flex-container">
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                          <h6 class="mb-0 font-weight-bold">Healthcare Industry</h6>
+                          <h5 class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
+                              Providing innovative solutions for the healthcare industry, improving patient care and operational efficiency.
+                          </h5>
                       </div>
                   </div>
               </div>
           </div>
-
+  
           <div class="row d-flex flex-column content-section" id="servicesContent" style="display: none;">
               <div class="col2">
                   <div class="d-flex-container">
-                      <div class="d-flex justify-content-between align-items-center mt-2">
-                          <h6 class="mb-0 font-weight-bold">AI-Driven Cybersecurity</h6>
-                          <p class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                          <h6 class="mb-0 font-weight-bold">AI-Driven Cybersecurity Service</h6>
+                          <h5 class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
                               Advanced cybersecurity solutions that leverage AI to detect and mitigate threats.
-                          </p>
+                          </h5>
                       </div>
                   </div>
               </div>
               <div class="col2">
                   <div class="d-flex-container">
-                      <div class="d-flex justify-content-between align-items-center mt-2">
-                          <h6 class="mb-0 font-weight-bold">Cloud Solutions</h6>
-                          <p class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                          <h6 class="mb-0 font-weight-bold">Cloud Solutions Service</h6>
+                          <h5 class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
                               Innovative cloud services ensuring scalability, security, and flexibility.
-                          </p>
+                          </h5>
+                      </div>
+                  </div>
+              </div>
+              <div class="col2">
+                  <div class="d-flex-container">
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                          <h6 class="mb-0 font-weight-bold">Data Analytics Service</h6>
+                          <h5 class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
+                              Transforming data into actionable insights through advanced analytics and data science.
+                          </h5>
                       </div>
                   </div>
               </div>
           </div>
       </div>
   </section>
-    <section id ="stories" class="section4" style="padding-top: 10px;">
+    <section id ="stories" class="section4" style="padding-top: 20px;">
         <div class="d-flex-container">
             <div class="d-flex justify-content-start align-items-center">
               <span class="text-start">
@@ -234,7 +266,7 @@
               <p class="mb-0" style="overflow-wrap: normal;">Unlock innovation and drive growth with tailored technology solutions for your business success</p>
             </div>
           </div>
-          <div class="st4" style=" overflow-x: auto;">
+          <div class="st4 gallery min-vh-100" style=" overflow-x: auto;">
             <div class="d-flex justify-content-between align-items-center mt-4" style="padding-left: 50px; padding-right: 20px; width: 100%;">
               <div class="p-2 flex-grow-1 bd-highlight" style="display: flex; flex-direction: column; justify-content: center;">
                 <p class="mb-0">Tringapps partners with NBC News to deliver white-labeled, feature-rich local news apps for iOS, Android, Roku, and AppleTV, ensuring efficient deployment across 56 markets. By implementing a single codebase, Tringapps created customized layouts for each market, integrating smart notifications for breaking news, enhanced analytics, and new ad networks to boost monetization. This collaboration increased user engagement significantly, reduced development costs by over 60%, and streamlined app maintenance through automated testing and build generation, making NBC's local apps highly popular in multiple markets.</p>
@@ -314,7 +346,7 @@
         </div>
   </section>
   <section id="spotlight" class="section6">
-    <div class="st6" style="padding-top: 40px; padding-bottom: 40px; margin-bottom: 20px;">
+    <div class="st6" style="padding-top: 60px; padding-bottom: 40px; margin-bottom: 20px;">
         <h2 class="text-warning mb-0">SPOTLIGHT ON</h2>
         <h1>Highlights</h1>
     </div>
@@ -404,13 +436,26 @@
   <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); text-align: center; color: white; padding-top: 10px;">
     <h1 style="margin-bottom: 10px;">Great Opportunity starts with a conversation</h1>
   </div>
- <br>
+  <br>
   <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-    <button style="background-color: white; border: 2px solid #333; color: #333; padding: 10px 20px; cursor: pointer;">
+    <button onclick="showContactDetails()" style="background-color: white; border: 2px solid #333; color: #333; padding: 10px 20px; cursor: pointer;">
       Contact Us
     </button>
   </div>
 </section>
+
+<div id="contactDetails" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); z-index: 1000;">
+  <h2>Tringapps Contact Details</h2>
+  <p><strong>Email:</strong> contact@tringapps.com</p>
+  <p><strong>Phone:</strong> +1 123-456-7890</p>
+  <p><strong>Address:</strong> 123 Tech Park, Silicon Valley, CA</p>
+  <button onclick="closeContactDetails()" style="background-color: #EBA832; border: none; padding: 10px 20px; cursor: pointer; color: white;">
+    Close
+  </button>
+</div>
+
+<div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999;" onclick="closeContactDetails()"></div>
+
 <section id="foot" class="section10" style="padding-left: 10%;padding-top: 20px;">
   <div class="row">
     <div class="col">
@@ -455,5 +500,6 @@
     </div>
   </div>
 </section>  
+
 </body>
 </html>

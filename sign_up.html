@@ -20,20 +20,20 @@
         }
         .container {
             display: flex;
-            width: 800px;
-            height: 500px;
+            width: 100vw; /* Full width */
+            height: 100vh; /* Full height */
             background: #222;
-            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
         }
         .form-container {
-            width: 50%;
+            width: 50vw; /* Half the screen */
+            height: 100vh;
             padding: 40px;
             color: #fff;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            background: #222;
         }
         .form-container h2 {
             margin-bottom: 20px;
@@ -71,9 +71,11 @@
             cursor: pointer;
         }
         .image-container {
-            width: 50%;
+            width: 50vw; 
+            height: 100vh; 
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
         }
         .error {
             color: red;
@@ -83,9 +85,13 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container" id="loginContainer">
     <div class="form-container" id="loginForm">
-        <h2>Sign In</h2>
+        <div class="d-flex justify-content-center align-items-center fixed-top bg-dark p-3">
+            <button type="button" class="btn btn-warning btn-sm px-4 " style="width: 200px;margin-right: 30px;" onclick="showLogin()">Sign In</button>
+            <button type="button" class="btn btn-warning btn-sm px-4 " style="width: 200px;margin-right: 20px;" onclick="showSignup()">Sign Up</button>
+        </div>        
+        <h2 class="mt-4" style="padding-top: 10%;">Sign In</h2>
         <label>Email*</label>
         <input type="email" id="loginEmail" placeholder="Enter email">
         <label>Password*</label>
@@ -99,7 +105,11 @@
 
 <div class="container" style="display: none;" id="signupContainer">
     <div class="form-container">
-        <h2>Sign Up</h2>
+        <div class="d-flex justify-content-center align-items-center fixed-top bg-dark p-3">
+            <button type="button" class="btn btn-warning btn-sm px-4 " style="width: 200px;margin-right: 30px;" onclick="showLogin()">Sign In</button>
+            <button type="button" class="btn btn-warning btn-sm px-4 " style="width: 200px;margin-right: 30px;" onclick="showSignup()">Sign Up</button>
+        </div> 
+        <h2 style="padding-top: 10%;">Sign Up</h2>
         <label>Name*</label>
         <input type="text" id="signupName" placeholder="Enter your name">
         <label>Email*</label>
@@ -114,13 +124,13 @@
 
 <script>
     function showSignup() {
-        document.getElementById('loginForm').parentElement.style.display = 'none';
+        document.getElementById('loginContainer').style.display = 'none';
         document.getElementById('signupContainer').style.display = 'flex';
     }
 
     function showLogin() {
         document.getElementById('signupContainer').style.display = 'none';
-        document.getElementById('loginForm').parentElement.style.display = 'flex';
+        document.getElementById('loginContainer').style.display = 'flex';
     }
 
     function signup() {
@@ -130,6 +140,14 @@
 
         if (name === "" || email === "" || password === "") {
             alert("Please fill all fields!");
+            return;
+        }
+        if (!email.includes("@gmail.com")) {
+            alert("Email must contain '@gmail.com'!");
+            return;
+        }
+        if (password.length < 8) {
+            alert("Password must be at least 8 characters long!");
             return;
         }
 
