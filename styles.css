@@ -293,6 +293,17 @@ line-height: 27px;
 letter-spacing: 0px;
 
 }
+.btn-transparent {
+  background-color: transparent !important; 
+  border: none !important; 
+  color: inherit !important;
+  padding: 10px 20px;
+  cursor: pointer; 
+}
+.btn-transparent:hover{
+  text-decoration: underline #EBA832 5px;
+ 
+}
 
 .col2 .d-flex-container {
   width: 100%;
