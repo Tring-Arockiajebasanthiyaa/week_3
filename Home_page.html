@@ -33,7 +33,6 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#Services">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown me-5">
@@ -68,6 +67,9 @@
                     <li class="nav-item me-5">
                         <a class="btn btn-warning" href="sign_up.html">Sign In</a>
                     </li>
+                    <li class="nav-item me-5">
+                      <a class="btn btn-warning" href="sign_up.html">Sign Out</a>
+                  </li>
                 </ul>
             </div>
         </div>
@@ -398,7 +400,7 @@
   </div>
   <div class="container" style="padding-top: 5%; overflow: hidden;">
     <div class="row" style="margin: 0; gap: 10px;">
-        <div class="col-2" style="position: relative; text-align: center; background-image: url('image/stories.png'); background-size: cover; background-position: center; height: 500px; width: 60%; overflow: hidden; padding: 0;">
+        <div class="col" style="position: relative; text-align: center; background-image: url('image/stories.png'); background-size: cover; background-position: center; height: 500px; width: 60%; overflow: hidden; padding: 0;">
             <img src="image/stories.png" alt="Background Image" style="width: 100%; height: 100%; object-fit: cover;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
             <p class="text-start" style="position: absolute; top: 50%; left: 0; width: 100%; transform: translate(0, -50%); color: #fff; font-size: 16px; margin: 0; padding: 0 20px; white-space: wrap; text-align: center;">
@@ -420,9 +422,10 @@
           <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.2);"></div>
       </div>
       
-      <div class="col" style="position: relative; width: 35%; height: 500px; overflow: hidden; padding: 0;">
+      <div class="col-2" style="position: relative; width: 35%; height: 500px; overflow: hidden; padding: 0;">
           <img src="image/book2.png" alt="Background Image" style="width: 100%; height: 100%; object-fit: cover;">
           <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.2);"></div>
+          
       </div>  
     </div>
 </div>  
@@ -533,7 +536,6 @@
   function scrollRight() {
       document.querySelector(".scroll-content").scrollBy({ left: 300, behavior: "smooth" });
   }
-  
   function showContactDetails() {
       document.getElementById("contactDetails").style.display = "block";
       document.getElementById("overlay").style.display = "block";

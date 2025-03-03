@@ -301,8 +301,7 @@ letter-spacing: 0px;
   cursor: pointer; 
 }
 .btn-transparent:hover{
-  text-decoration: underline #EBA832 5px;
- 
+  background: #EBA832 ; 
 }
 
 .col2 .d-flex-container {
