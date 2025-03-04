@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
     crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
 <div class="bg">
@@ -62,7 +63,7 @@
                         <a class="nav-link" href="#foot">About</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#oportunity">Contact Us</a>
+                        <a class="nav-link" href="#oportunity">ContactUs</a>
                     </li>
                     <li class="nav-item me-5">
                         <a class="btn btn-warning" href="sign_up.html">Sign In</a>
@@ -176,14 +177,14 @@
       </div>
     
       <div class="d-flex justify-content-start align-items-center gap-4 mt-4" style="padding-left: 10px;">
-        <button type="button" class="btn btn-transparent btn-warning border-0 btn-sm px-4 active" style="width: 200px;" id="industriesBtn">
+        <button type="button" class="btn btn-transparent btn-warning border-0 btn-sm px-4" style="width: 200px;" id="industriesBtn">
           Industries
         </button>
         <button type="button" class="btn btn-transparent btn-warning border-0 btn-sm px-4" style="width: 200px;" id="servicesBtn">
           Services
         </button>
       </div> 
-    
+      
       <div class="container2 min-vh-95" style=" padding-top: 30px;display: block;position: relative; z-index: 10;">
         <div class="row d-flex flex-column content-section"  id="industries" >
           <div class="col2">
@@ -518,15 +519,37 @@
 
     industriesSection.style.display = "block";
     servicesSection.style.display = "none";
-
+    industriesBtn.style.textDecoration = "underline";
+    industriesBtn.style.textDecorationColor ="#EBA832";
+    industriesBtn.style.fontWeight="bold";
+    industriesBtn.style.color="black";
     industriesBtn.addEventListener("click", function () {
         industriesSection.style.visibility = 'visible';  
-        servicesSection.style.display = "none";     
+        servicesSection.style.display = "none";  
+        industriesBtn.style.fontWeight="bold";
+        industriesBtn.style.color="black";
+        industriesBtn.style.textDecoration = "underline";
+        industriesBtn.style.textDecorationColor ="#EBA832";
+        servicesBtn.style.textDecoration = "none";
+        servicesBtn.style.textDecoration ="none";
+        servicesBtn.style.textDecorationColor ="none";
+        servicesBtn.style.fontWeight = "normal";
+        servicesBtn.style.color = "gray";
+        
     });
 
     servicesBtn.addEventListener("click", function () {
         industriesSection.style.visibility = 'hidden';   
         servicesSection.style.display = "block";   
+        industriesBtn.style.textDecoration = "none";
+        servicesBtn.style.textDecoration ="underline";
+        servicesBtn.style.fontWeight="bold";
+        servicesBtn.style.color = "black";
+        //servicesBtn.style.fontSize = "20px";
+        servicesBtn.style.textDecorationColor ="#EBA832";
+        industriesBtn.style.textDecorationColor ="none";
+        industriesBtn.style.fontWeight="normal";
+        industriesBtn.style.color="gray";
     });
 });
 
