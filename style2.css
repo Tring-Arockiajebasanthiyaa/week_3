@@ -1,28 +1,197 @@
-/* body {
-    background-color: #111;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+form {
+display: flex;
+flex-direction: column;
+}
+.container {
+    display: flex;
+    width: 100vw; 
+    height: 100vh; 
+    background: #222;
+    overflow: hidden;
+}
+#loginContainer .password-field {
+position: relative;
+width: 100%;
 }
 
-.bg-dark {
-    background-color: #222 !important;
+#loginForm .password-field input {
+width: 90%;
+padding: 10px;
+padding-right: 40px; 
+border: 1px solid white;
+background: #222;
+color: white;
+border-radius: 5px;
 }
 
-.btn-warning {
-    background-color: #f7a81b !important;
+#loginForm .password-field .toggle-password {
+position: absolute;
+right: 10px;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+color: white;
+}
+.form-container {
+    width: 50vw; 
+    height: 110vh;
+    padding: 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #222;
+}
+.form-container h2 {
+    margin-bottom: 20px;
+    color: orange;
+}
+.form-container label {
+    margin: 10px 0 5px;
+}
+.form-container input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    background:transparent;
+    color: #fff;
+}
+.btn {
+    background: orange;
+    color: black;
     border: none;
+    padding: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 90%;
+    font-size: 16px;
+    
+}
+.switch-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.switch-text a {
+    color: orange;
+    cursor: pointer;
+}
+.image-container {
+    width: 50vw; 
+    height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.error {
+    color: red;
+    font-size: 14px;
+}
+.tring1{ 
+    position:absolute;
+    top: 15px;
+    left:40px;
+    width: 120px;  
+     
+}
+.tring2{
+    position:absolute;
+    top: 0;
+    left:40px;
+    width: 110px;  
+}
+#signupContainer form-container {
+    width: 50vw; 
+    height: 110vh;
+    padding: 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #222;
+}
+#signupConatiner .form-container h2 {
+    margin-bottom: 10px;
+    color: orange;
+}
+#signupContainer input{
+    width: 75%;
+    padding: 6px;
+}
+#signupContainer .btn{
+    width:70%;
+    padding: 5px;
+}
+#signupContainer button{
+    padding-top: 10px;
+
+}
+#signupContainer h1{
+    font-size: 14px;
+    padding: 5px;
+}
+#signupContainer .container{
+    height: 160vh;
+}
+.phone-field {
+  display: flex;
+  gap: 5px;
+}
+.phone-field select {
+    width: 10% !important;
+}
+ .phone-field input {
+   width: 65% !important;
+   margin-top: 10px;
+   padding: auto;
+   
+ }
+#signupContainer select {
+width: 75%;
+padding: 10px;
+border: 1px solid white;
+background: #222;
+color: white;
+border-radius: 5px;
+margin-top: 5px;
+}
+#signupContainer label{
+font-size: 14px;
+margin-top: 10px;
+}
+.password-field {
+position: relative;
+width: 100%;
 }
 
-.btn-warning:hover {
-    background-color: #e69b17 !important;
+.password-field input {
+width: 100%;
+padding: 10px;
+padding-right: 40px; 
+border: 1px solid white;
+background: #222;
+color: white;
+border-radius: 5px;
 }
 
-.btn-secondary {
-    background-color: #444 !important;
-    border: none;
+.password-field .toggleSignupPassword {
+position: absolute;
+right: 10px;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+color: white;
 }
-
-.bg-image {
-    background: url('image/signup.png') no-repeat center center/cover;
-    height: 100%;
-}
-
-     */
