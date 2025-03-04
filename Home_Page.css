@@ -631,9 +631,7 @@ color: #6e6c6c;
 .img-hover-effect {
   transition: transform 0.4s ease-in-out;
 }
-.img-hover-effect:hover{
-  width: 100% !important; 
-}
+
 .img-hover-expand:hover .img-hover-effect {
   transform: scale(1.05); 
 

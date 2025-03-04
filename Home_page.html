@@ -15,7 +15,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
     crossorigin="anonymous">
     
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="Home_Page.css">
 </head>
 <body>
 <div class="bg">
@@ -66,10 +66,10 @@
                         <a class="nav-link" href="#oportunity">ContactUs</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="btn btn-warning" href="sign_up.html">Sign In</a>
+                        <a class="btn btn-warning" href="SignInUp.html">Sign In</a>
                     </li>
                     <li class="nav-item me-5">
-                      <a class="btn btn-warning" href="sign_up.html">Sign Out</a>
+                      <a class="btn btn-warning" href="SignInUp.html">Sign Out</a>
                   </li>
                 </ul>
             </div>
@@ -507,71 +507,7 @@
     </div>
   </div>
 </section>  
-<script>
- document.addEventListener("DOMContentLoaded", function () {
-    const industriesBtn = document.getElementById("industriesBtn");
-    const servicesBtn = document.getElementById("servicesBtn");
-
-    const industriesSection = document.getElementById("industries");
-    const servicesSection = document.getElementById("services");
-
-
-    industriesSection.style.display = "block";
-    servicesSection.style.display = "none";
-    industriesBtn.style.textDecoration = "underline";
-    industriesBtn.style.textDecorationColor ="#EBA832";
-    industriesBtn.style.fontWeight="bold";
-    industriesBtn.style.color="black";
-    industriesBtn.addEventListener("click", function () {
-        industriesSection.style.visibility = 'visible';  
-        servicesSection.style.display = "none";  
-        industriesBtn.style.fontWeight="bold";
-        industriesBtn.style.color="black";
-        industriesBtn.style.textDecoration = "underline";
-        industriesBtn.style.textDecorationColor ="#EBA832";
-        servicesBtn.style.textDecoration = "none";
-        servicesBtn.style.textDecoration ="none";
-        servicesBtn.style.textDecorationColor ="none";
-        servicesBtn.style.fontWeight = "normal";
-        servicesBtn.style.color = "gray";
-        
-    });
-
-    servicesBtn.addEventListener("click", function () {
-        industriesSection.style.visibility = 'hidden';   
-        servicesSection.style.display = "block";   
-        industriesBtn.style.textDecoration = "none";
-        servicesBtn.style.textDecoration ="underline";
-        servicesBtn.style.fontWeight="bold";
-        servicesBtn.style.color = "black";
-        //servicesBtn.style.fontSize = "20px";
-        servicesBtn.style.textDecorationColor ="#EBA832";
-        industriesBtn.style.textDecorationColor ="none";
-        industriesBtn.style.fontWeight="normal";
-        industriesBtn.style.color="gray";
-    });
-});
-
-  function scrollLeft_BTN() {
-      document.querySelector(".scroll-content").scrollBy({ left: -300, behavior: "smooth" });
-  }
-  function scrollRight() {
-      document.querySelector(".scroll-content").scrollBy({ left: 300, behavior: "smooth" });
-  }
-  function showContactDetails() {
-      document.getElementById("contactDetails").style.display = "block";
-      document.getElementById("overlay").style.display = "block";
-    }
-  
-    function closeContactDetails() {
-      document.getElementById("contactDetails").style.display = "none";
-      document.getElementById("overlay").style.display = "none";
-    }
-    function toggleExtraContent() {
-          var content = document.getElementById("extraContent");
-          content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
-      } 
-    </script>  
+<script src="Home_Page.js"></script>  
   
 </body>
 </html>
