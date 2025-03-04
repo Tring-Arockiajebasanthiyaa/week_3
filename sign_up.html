@@ -183,42 +183,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-const phoneLengths = {
-    "+1": 10,  // USA
-    "+44": 10, // UK
-    "+91": 10, // India
-    "+61": 9,  // Australia
-    "+81": 10  // Japan
-};
-
-function setPhoneLength() {
-    let countryCode = document.getElementById("country-code").value;
-    let phoneInput = document.getElementById("phone");
-    
-    let maxLength = phoneLengths[countryCode]; // Get max length from object
-    
-    if (maxLength) {
-        phoneInput.setAttribute("maxlength", maxLength);
-        phoneInput.setAttribute("data-length", maxLength);
-    }
-}
-
-// Function to validate phone number length
-function validatePhone() {
-    let phoneInput = document.getElementById("phone");
-    let maxLength = phoneInput.getAttribute("data-length");
-
-    if (phoneInput.value.length > 0 && phoneInput.value.length < maxLength) {
-        alert(`Phone number must be ${maxLength} digits long!`);
-    }
-}
-
-document.getElementById("country-code").addEventListener("change", setPhoneLength);
-document.getElementById("phone").addEventListener("blur", validatePhone);
-setPhoneLength();
-
-
     
 </script>
 
