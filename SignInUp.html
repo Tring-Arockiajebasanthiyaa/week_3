@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="SignInUp.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+
 </head>
 <body>
 
@@ -16,9 +17,9 @@
             <div  class="tring1">
                 <img src="./image/tringapps-copy-2.png" alt="tringapps">
             </div>
-            <div class="d-flex justify-content-center align-items-center  bg-dark "  id="loginbtn">
-                <button type="button" class="btn btn-warning btn-sm " style="width: 100px;margin-right: 0;background: #FFFFFF1A;" onclick="showLogin()">Sign In</button>
-                <button type="button" class="btn btn-warning btn-sm" style="width: 100px;margin-left: -1px" onclick="showSignup()">Sign Up</button>
+            <div class="d-flex justify-content-center align-items-center"  id="loginbtn">
+                <button type="button" class="btn btn-sm " style="width: 100px;margin-right: 0;background: #FFFFFF1A;" onclick="showLogin()">Sign In</button>
+                <button type="button" class="btn  btn-sm" style="width: 100px;margin-left: -1px" onclick="showSignup()">Sign Up</button>
             </div>
         </div>        
         <div class="login_form">
@@ -97,18 +98,30 @@
             <div class="password-field">
                 <input type="password" id="signupPassword" placeholder="Enter password" required>
                 <span id="toggleSignupPassword"><i class="fa fa-eye"></i></span>
-            </div>     
-            <div style="display: flex; align-items: center; margin-top: 10px;">
+            </div>   
+            <div class="checkbox-group">
+                <input type="checkbox" id="remember-me" name="remember-me" style="width: auto; margin-right: 5px;">
+                <label for="remember-me">Remember me</label>
+            </div>  
+            <div  class="agree-term">
                 <input type="checkbox" id="agreeTerms" style="width: auto; margin-right: 5px;" required>
-                <label for="agreeTerms" style="margin: 0;">I agree to all the Terms and Privacy Policy</label>
+                <label for="agreeTerms">I agree to all the <span class="highlight">Terms</span> and <span class="text-warning"> Privacy Policy</span></label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" id="radio1" name="example" style="width: auto; margin-right: 5px;">
+                <label for="radio1">I'm over 18+</label>
             </div>
             <div class="signupbtn">
                 <button onclick="signup()">Submit</button>
             </div>
+            <span class="divider">OR</span>
+            <button type="button" class="google-signup">
+                    Sign Up with <img src="./image/ic_google.png" alt="Google Icon"> 
+            </button>
             <p class="switch-text">Already have an account? <a onclick="showLogin()">Sign In</a></p>
         </div>
     </div>
-    <div class="image-container" id="signupImage" style="background-image: url('image/login.png');height: 160vh;"></div>
+    <div class="image-container" id="signupImage" style="background-image: url('image/login.png')"></div>
 </div>
 <script src="SignInUp.js"></script>
 </body>

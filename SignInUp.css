@@ -213,15 +213,12 @@ body {
 /* sign up page css */
 
 #signupContainer .form-container {
-    width: 450px;
-    height: 562px;
     padding: 80px;
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #222;
-    padding-top: 0;
+    background: #222; 
     
 }
 
@@ -231,6 +228,7 @@ body {
     height: 110vh; 
     overflow: hidden;
     justify-content: center;
+    padding-left: 10px;
 }
 .sign-head {
     display: flex;
@@ -254,13 +252,13 @@ body {
 .signup-form{
     display: flex;
     flex-direction: column;
-    width: 450px;
+    width: 460px;
     height: 592px;
     gap: 3px;
     padding-top: 5px;
 }
 #signupContainer input{
-    width: 430px;
+    width: 425px;
     height: 10px;
     gap: 10px;
     padding-top: 12px;
@@ -306,7 +304,7 @@ body {
   gap: 5px !important;
 }
 .phone-field select {
-    width: 120px;
+    width: 70px;
     height: 45px;
     gap: 10px;
     padding-top: 12px;
@@ -318,14 +316,14 @@ body {
     color: #FFFFFF;
 }
 .phone-field input {
-    width: 450px;
+    width: 330px;
     height: 20px !important;
     gap: 10px;
-    padding-top: 12px;
-    padding-right: 30px !important;
-    padding-bottom: 12px;
-    padding-left: 50px !important; 
     border-width: 1px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
     background: #292929;  
  }
 
@@ -336,7 +334,7 @@ body {
 }
 
 .password-field input {
-    width: 466px;
+    width: 450px;
     height: 20px !important;
     gap: 10px;
     padding-top: 12px;
@@ -354,10 +352,29 @@ body {
     cursor: pointer;
     color: white;
 }
+
+
+#signupContainer input[type="checkbox"],
+input[type="radio"]{
+    accent-color: white;
+    cursor: pointer;
+    width: 16px;
+    height: 10px;
+}
+.checkbox-group label,
+.radio-container label {
+    color:white;
+    font-size: 14px;
+    cursor:pointer;
+}
+.agree-term span{
+    color:#EBA832
+}
+
 .signupbtn button{
     font-size: 16px;
-    width: 465px !important;
-    height: 45px;
+    width: 455px !important;
+    height: 40px;
     padding-top: 16px;
     padding-right: 38px;
     padding-bottom: 16px;
@@ -366,4 +383,24 @@ body {
     width:96%;
     color: #292929;
     border: none;
+}
+
+.google-signup {
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    width:100%;
+}
+.divider {
+    text-align: center;
+   
+    color: #888;
+    padding-top: 0;
 }
