@@ -59,5 +59,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     function toggleExtraContent() {
           var content = document.getElementById("extraContent");
-          content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+          content.style.display = (content.style.display === "none" || content.style.display === "") ? "inline-block" : "none";
       } 

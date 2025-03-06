@@ -31,17 +31,17 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#Services">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#Services">Service1</a></li>
+                            <li><a class="dropdown-item" href="#">Service2</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown me-5">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Platforms
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-                            <li><a class="dropdown-item" href="#Platforms">Platform 1</a></li>
+                        <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink2">
+                            <li><a class="dropdown-item " href="#Platforms">Platform 1</a></li>
                             <li><a class="dropdown-item" href="#">Platform 2</a></li>
                             <li><a class="dropdown-item" href="#">Platform 3</a></li>
                         </ul>
@@ -50,7 +50,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Industries
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                        <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink3">
                             <li><a class="dropdown-item" href="#Stories">Industry 1</a></li>
                             <li><a class="dropdown-item" href="#">Industry 2</a></li>
                             <li><a class="dropdown-item" href="#">Industry 3</a></li>
@@ -68,9 +68,6 @@
                     <li class="nav-item me-5">
                         <a class="btn btn-warning" href="SignInUp.html">Sign In</a>
                     </li>
-                    <li class="nav-item me-5">
-                      <a class="btn btn-warning" href="SignInUp.html">Sign Out</a>
-                  </li>
                 </ul>
             </div>
         </div>
@@ -83,16 +80,14 @@
       </div>
   </div>
   
-  <div id="extraContent" style="display: none; padding: 15px; background: #f8f9fa; border-radius: 8px; margin-top: 10px;">
-      <h2>Why Choose Our OTT Solutions?</h2>
-      <p>We offer seamless, scalable, and feature-rich OTT solutions that ensure high-quality streaming across multiple devices. Our technology is designed to maximize viewer engagement and optimize content delivery.</p>
+  <div id="extraContent" class="bg-secondary">
+      <h3>Why Choose Our OTT Solutions?</h3>
+      <p>We offer seamless, scalable, and feature-rich OTT solutions that ensure high-quality streaming across multiple devices.</p>
       <ul>
           <li>Adaptive Streaming for Any Network</li>
           <li>Multi-Platform Support (Web, Mobile, TV)</li>
-          <li>AI-Powered Recommendations</li>
-          <li>Monetization & Subscription Management</li>
       </ul>
-      <button class="btn btn-secondary" onclick="toggleExtraContent()">Close</button>
+      <button class="btn btn-warning" onclick="toggleExtraContent()">Close</button>
   </div>  
 </div>
 <section id="Services" class="section2 min-vh-100" style="padding-top: 10px;"> 
@@ -109,7 +104,7 @@
           <p class="mb-0" style="overflow-wrap: normal; padding-right: 280px;">Explore cutting-edge AI research, trends, and expert insights for business <br>growth and innovation</p>
         </div>
       </div>
-      <div class="container scroll-content" style="padding-top: 50px;">
+      <div class="container scroll-content"  id="insight">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
             <div class="col">
               <h2>INSIGHTS</h2>
@@ -147,13 +142,13 @@
               <p>Staying competitive in modern sales today effectively means embracing the latest trends in tech.</p><br><br>
               <div class="image-container">
                   <div class="image-wrapper">
-                    <img src="image/research4.png" alt="Research" class="slanted-image" style="clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);">
+                    <img src="image/research4.png" alt="Research" class="slanted-image1">
                   </div>
                 </div>
             </div>
           </div>
       </div>
-      <div class="flex-shrink-0" style="color:#fff; display: flex; justify-content: end; gap: 10px; padding-right: 10px;">
+      <div class="flex-shrink-0"  id="scrollbtn">
         <button class="scroll-btn left-btn bg-dark" onclick="scrollLeft_BTN()">❮</button>
         <button class="scroll-btn right-btn bg-dark" onclick="scrollRight()">❯</button>
     </div>    
@@ -168,30 +163,30 @@
       </div>
     
       <div class="d-flex-container">
-        <div class="d-flex justify-content-between align-items-center mt-5" style="background: #FFFFFF14; padding-bottom: 10px;">
+        <div class="d-flex justify-content-between align-items-center mt-5" id="service-field">
           <h1>Industries & Services</h1>
-          <h5 class="mb-0" style="overflow-wrap: normal; padding-right: 220px;">
+          <h5 class="mb-0"  id="st1">
             Explore our comprehensive services and tailored solutions to unlock <br> your business potential.
           </h5>
         </div>
       </div>
     
-      <div class="d-flex justify-content-start align-items-center gap-4 mt-4" style="padding-left: 10px;">
-        <button type="button" class="btn btn-transparent btn-warning border-0 btn-sm px-4" style="width: 200px;" id="industriesBtn">
+      <div class="d-flex justify-content-start align-items-center gap-4 mt-4"  id="servicebtn-field">
+        <button type="button" class="btn btn-transparent btn-warning border-0 btn-sm px-4"  id="industriesBtn">
           Industries
         </button>
-        <button type="button" class="btn btn-transparent btn-warning border-0 btn-sm px-4" style="width: 200px;" id="servicesBtn">
+        <button type="button" class="btn btn-transparent btn-warning border-0 btn-sm px-4"  id="servicesBtn">
           Services
         </button>
       </div> 
       
-      <div class="container2 min-vh-95" style=" padding-top: 30px;display: block;position: relative; z-index: 10;">
+      <div class="container2 min-vh-95">
         <div class="row d-flex flex-column content-section"  id="industries" >
           <div class="col2">
             <div class="d-flex-container">
               <div class="d-flex justify-content-between align-items-center mt-3 mb-2">
                 <h5 class="mb-0 font-weight-bold">Streaming Industry</h5>
-                <h6 class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
+                <h6 class="mb-0"  id="industry-field">
                   Our OTT Platform offers a comprehensive solution for content creators and distributors to deliver
                   high-quality streaming experiences.
                 </h6>
@@ -202,7 +197,7 @@
             <div class="d-flex-container">
               <div class="d-flex justify-content-between align-items-center mt-3 mb-2">
                 <h6 class="mb-0 font-weight-bold">E-Commerce Industry</h6>
-                <h5 class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
+                <h5 class="mb-0"  id="industry-field">
                   Empowering online businesses with cutting-edge technologies for personalized shopping experiences.
                 </h5>
               </div>
@@ -212,7 +207,7 @@
             <div class="d-flex-container">
               <div class="d-flex justify-content-between align-items-center mt-3 mb-2">
                 <h6 class="mb-0 font-weight-bold">Healthcare Industry</h6>
-                <h5 class="mb-0" style="overflow-wrap: break-word; padding-right:10px; width: 70%;">
+                <h5 class="mb-0" id="industry-field">
                   Providing innovative solutions for the healthcare industry, improving patient care and operational
                   efficiency.
                 </h5>
@@ -220,13 +215,13 @@
             </div>
           </div>
         </div>
-        <div class="container_2 min-vh-100  overlay-container position-absolute top-0 left-0" style="padding-top:30px;display: none;" id="services">
+        <div class="container_2 min-vh-100  overlay-container position-absolute top-0 left-0"  id="services">
           <div class="row d-flex flex-column content-section">
             <div class="col2">
               <div class="d-flex-container">
                 <div class="d-flex justify-content-between align-items-center mt-4 mb-2">
-                  <h6 class="mb-0 font-weight-bold" style=" width: auto; max-width: 90%;">AI-Driven Cybersecurity Service</h6>
-                  <h5 class="mb-0" style=" width: 60%;">
+                  <h6 class="mb-0 font-weight-bold"  id="ai">AI-Driven Cybersecurity Service</h6>
+                  <h5 class="mb-0" style="width: 60%;">
                     Advanced cybersecurity solutions that leverage AI to detect and mitigate threats.
                   </h5>
                 </div>
@@ -235,8 +230,8 @@
             <div class="col2">
               <div class="d-flex-container">
                 <div class="d-flex justify-content-between align-items-center mt-4 mb-2">
-                  <h6 class="mb-0 font-weight-bold"  style=" width: auto; max-width: 90%;">Cloud Solutions Service</h6>
-                  <h5 class="mb-0" style="overflow-wrap: break-word; width: 60%;">
+                  <h6 class="mb-0 font-weight-bold"  id="cl">Cloud Solutions Service</h6>
+                  <h5 class="mb-0"  id="inovate">
                     Innovative cloud services ensuring scalability, security, and flexibility.
                   </h5>
                 </div>
@@ -245,8 +240,8 @@
             <div class="col2">
               <div class="d-flex-container">
                 <div class="d-flex justify-content-between align-items-center mt-4 mb-2">
-                  <h6 class="mb-0 font-weight-bold"  style=" width: auto; max-width: 90%;">Data Analytics Service</h6>
-                  <h5 class="mb-0" style="overflow-wrap: break-word; width: 60%;word-break: normal;">
+                  <h6 class="mb-0 font-weight-bold"  id="data-ser">Data Analytics Service</h6>
+                  <h5 class="mb-0"  id="trans">
                     Transforming data into actionable insights through advanced analytics and data science.
                   </h5>
                 </div>
@@ -430,12 +425,14 @@
     </div>
 </div>  
 </section>
+
 <section id="Client" class="section8" style="background-color: white; padding-top: 40px; padding-bottom: 40px;">
   
   <div style="text-align: center;">
     <h2 class="text-warning mb-3" style="text-transform: uppercase;">TRUSTED PARTNERSHIPS</h2>
     <h1 style="text-transform: uppercase; color: #333;" class="mb-0">OUR VALUED CLIENT</h1>
-    <img src="image/clients.png" alt="Our Clients" class="img-fluid " style="height: 200px;width:100%">
+    <marquee direction="left" ><img src="image/clients.png" alt="Our Clients" class="img-fluid " style="height: 100px;width:100%"></marquee>
+    
   </div>
  
 </section>
@@ -469,11 +466,11 @@
       <h1 class="align-text-top mb-2">tringapps</h1>
       <p class="mb-3">Lorem Ipsum is simply dummy text of the 
         printing and typesetting industry.</p>
-        <img src="image/Social Media Icons.png" alt="Social Media" style="width:55%;height: 50px;" class="mb-3">
+        <img src="image/Social Media Icons.png" alt="Social Media" style="width:55%;height: 20px;" class="mb-3">
         <p class="mb-3">© 2024 TRINGAPPS, INC. ALL RIGHTS RESERVED</p>
-        <img src="image/Certificate.png" alt="Certificate" style="width:100%;height: 60px;" class="mb-3">
+        <img src="image/Certificate.png" alt="Certificate" style="width:75%;height: 30px;" class="mb-3">
         <h2 class="mb-2">Our Affiliates</h2>
-        <img src="image/foot.png" alt=" Affiliates" style="width:50%;height: 50px;" class="mb-2">
+        <img src="image/foot.png" alt=" Affiliates" style="width:50%;height: 10px;" class="mb-2">
     </div>
     <div class="col">
       <h2 class="mb-4">Services</h2>

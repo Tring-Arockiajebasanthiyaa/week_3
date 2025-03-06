@@ -18,8 +18,8 @@
                 <img src="./image/tringapps-copy-2.png" alt="tringapps">
             </div>
             <div class="d-flex justify-content-center align-items-center"  id="loginbtn">
-                <button type="button" class="btn btn-sm " style="width: 100px;margin-right: 0;background: #FFFFFF1A;" onclick="showLogin()">Sign In</button>
-                <button type="button" class="btn  btn-sm" style="width: 100px;margin-left: -1px" onclick="showSignup()">Sign Up</button>
+                <button type="button" class="btn btn-sm " style="width: 100px;margin-right: 0;" onclick="showLogin()">Sign In</button>
+                <button type="button" class="btn  btn-sm" style="width: 100px;margin-left: -1px;background: #FFFFFF1A;" onclick="showSignup()">Sign Up</button>
             </div>
         </div>        
         <div class="login_form">
@@ -60,9 +60,9 @@
             <span class="tring2"><img src="./image/tringapps-copy-2.png" alt="tringapps"> </span>
             <div class="d-flex justify-content-center align-items-center bg-dark p-2 "  id="signupbtn">
     
-                <button type="button" class="btn btn-warning btn-sm" style="width: 100px; margin-right: 0;" onclick="showLogin()">Sign In</button>
+                <button type="button" class="btn btn-warning btn-sm" style="width: 100px; margin-right: 0;background: #FFFFFF1A;" onclick="showLogin()">Sign In</button>
             
-                <button type="button" class="btn btn-warning btn-sm" style="width: 100px; margin-left: -1px;background: #FFFFFF1A;" onclick="showSignup()">Sign Up</button>
+                <button type="button" class="btn btn-warning btn-sm" style="width: 100px; margin-left: -1px;" onclick="showSignup()">Sign Up</button>
             
             </div>
         </div>
@@ -100,7 +100,7 @@
                 <span id="toggleSignupPassword"><i class="fa fa-eye"></i></span>
             </div>   
             <div class="checkbox-group">
-                <input type="checkbox" id="remember-me" name="remember-me" style="width: auto; margin-right: 5px;">
+                <input type="checkbox" id="remember-me" name="remember-me" class="bg-dark" style="width: auto; margin-right: 5px;">
                 <label for="remember-me">Remember me</label>
             </div>  
             <div  class="agree-term">
@@ -118,7 +118,7 @@
             <button type="button" class="google-signup">
                     Sign Up with <img src="./image/ic_google.png" alt="Google Icon"> 
             </button>
-            <p class="switch-text">Already have an account? <a onclick="showLogin()">Sign In</a></p>
+            <p class="switch-text" id="switch-field">Already have an account? <a onclick="showLogin()">Sign In</a></p>
         </div>
     </div>
     <div class="image-container" id="signupImage" style="background-image: url('image/login.png')"></div>

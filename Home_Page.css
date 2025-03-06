@@ -6,7 +6,7 @@
     width: 100%;
     height: 600px;
     background-position: left center;
-  }
+}
   
   .navbar {
     background-color: transparent !important;
@@ -14,13 +14,13 @@
   .navbar .nav-link{
     color: #FEFEFE !important;
   }
-  .navbar-brand{
+.navbar-brand{
     color: #FEFEFE !important;
     width: 150px;
     height: 32px;
     font-weight: bold;
-  }
-  .content-nav {
+}
+.content-nav {
     position: absolute;
     top: 50%;
     left: 5%;
@@ -58,11 +58,11 @@ padding-left: 1.4px;
 } 
 .section2 h1{
     font-family: Rajdhani;
-font-weight: 700px;
-font-size: 42px;
-line-height: 53.59px;
-letter-spacing: 0%;
-color: #FEFEFE;
+    font-weight: 700px;
+    font-size: 42px;
+    line-height: 53.59px;
+    letter-spacing: 0%;
+    color: #FEFEFE;
 }
 
 body {
@@ -80,18 +80,26 @@ img {
   flex-direction: column;
 }
 .section2 p{
-font-family: Open Sans;
-font-weight: 400px;
-font-size: 18px;
-line-height: 30px;
-letter-spacing: 0px;
-color: #6e6c6c;
+  font-family: Open Sans;
+  font-weight: 400px;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #6e6c6c;
 
 }
 .section2{
     background: #292929;
 
 }
+#extracontent{
+  display: none; 
+  padding: 15px; 
+  border-radius: 8px; 
+  margin-top: 25%;
+  margin-left: 20%;
+}
+
 .section2 .container
 {
     color: #FEFEFE;
@@ -100,19 +108,19 @@ color: #6e6c6c;
   
 }
 .container .col h2{
-font-family: Open Sans;
-font-weight: 500px;
-font-size: 14px;
-line-height: 19.07px;
-letter-spacing: 36%;
-color: #6e6c6c;
+  font-family: Open Sans;
+  font-weight: 500px;
+  font-size: 14px;
+  line-height: 19.07px;
+  letter-spacing: 36%;
+  color: #6e6c6c;
 }
 .container .col h6{
   font-family: Rajdhani;
-font-weight: 600px;
-font-size: 20px;
-line-height: 25.52px;
-letter-spacing: 0%;
+  font-weight: 600px;
+  font-size: 20px;
+  line-height: 25.52px;
+  letter-spacing: 0%;
 }
 .container {
   overflow-x: auto;
@@ -120,7 +128,12 @@ letter-spacing: 0%;
   padding-bottom: 20px;
   text-wrap: wrap;
 }
-
+#insight{
+  padding-top: 50px;
+}
+.slanted-image1{
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
 .row {
   display: flex;
   flex-wrap: nowrap;
@@ -167,7 +180,13 @@ letter-spacing: 0%;
   object-fit: cover;
   
 }
-
+#scrollbtn{
+  color:#fff; 
+  display: flex;
+  justify-content: end; 
+  gap: 10px;
+  padding-right: 10px;
+}
 .container::-webkit-scrollbar {
   height: 10px;
 }
@@ -192,6 +211,25 @@ letter-spacing: 0%;
 }
 #services{
   display: none;
+}
+#service-field{
+  background: #FFFFFF14; 
+  padding-bottom: 10px;
+}
+.st1{
+  overflow-wrap: normal;
+  padding-right: 220px;
+}
+#servicebtn-field
+{
+  padding-left: 10px;
+}
+#servicesBtn{
+  width: 200px;
+}
+#industriesBtn
+{
+  width: 200px;
 }
 .section3 p{
 font-family: Open Sans;
@@ -256,6 +294,48 @@ letter-spacing: 0px;
 
 .container2{
   padding-left: 2px;
+  padding-top: 30px;
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+#industry-field
+{
+  overflow-wrap: break-word;
+  padding-right:10px; 
+  width: 70%;
+}
+#services
+{
+  padding-top:30px;
+  display: none;
+}
+#ai
+{
+  width: auto; 
+  max-width: 90%;
+}
+#cl
+{
+  width: auto; 
+  max-width: 90%;
+}
+#innovate
+{
+  overflow-wrap: break-word; 
+  width: 60%;
+}
+#data-ser
+{
+  width: auto; 
+  max-width: 90%;
+}
+#trans
+{
+  overflow-wrap: break-word; 
+  width: 60%;
+  word-break: normal;
 }
 .container2 h6
 {
